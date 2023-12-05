@@ -24,15 +24,48 @@
         <action
             android:id="@+id/action_homeFragment_to_mealListFragment"
             app:destination="@id/mealListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exerciseSuggestionsFragment"
+            app:destination="@id/exerciseSuggestionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/workoutListFragment"
         android:name="akshita.ken.nadin.WorkoutListFragment"
         android:label="fragment_workout_list"
-        tools:layout="@layout/fragment_workout_list" />
+        tools:layout="@layout/fragment_workout_list" >
+        <action
+            android:id="@+id/action_workoutListFragment_to_addWorkoutFragment"
+            app:destination="@id/addWorkoutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mealListFragment"
         android:name="akshita.ken.nadin.MealListFragment"
         android:label="fragment_meal_list"
-        tools:layout="@layout/fragment_meal_list" />
+        tools:layout="@layout/fragment_meal_list" >
+        <action
+            android:id="@+id/action_mealListFragment_to_addMealFragment"
+            app:destination="@id/addMealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWorkoutFragment"
+        android:name="akshita.ken.nadin.addWorkoutFragment"
+        android:label="addWorkoutFragment" >
+        <action
+            android:id="@+id/action_addWorkoutFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMealFragment"
+        android:name="akshita.ken.nadin.addMealFragment"
+        android:label="fragment_add_meal"
+        tools:layout="@layout/fragment_add_meal" >
+        <action
+            android:id="@+id/action_addMealFragment_to_mealListFragment"
+            app:destination="@id/mealListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseSuggestionsFragment"
+        android:name="akshita.ken.nadin.ExerciseSuggestionsFragment"
+        android:label="fragment_exercise_suggestions"
+        tools:layout="@layout/fragment_exercise_suggestions" />
 </navigation>

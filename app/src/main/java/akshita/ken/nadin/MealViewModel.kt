@@ -2,13 +2,16 @@ package akshita.ken.nadin
 
 import akshita.ken.nadin.Data.Meal.Meal
 import akshita.ken.nadin.Data.Meal.MealDao
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class MealViewModel (private val mealDao: MealDao): ViewModel() {
-
+    fun getAllMeals(): LiveData<List<Meal>> {
+        return mealDao.getAllMeals()
+    }
     fun addNewMeal(mealName: String, calories: Int, date: String, mealType: String){
         val newMeal = getNewMealEntry(mealName, calories, date, mealType)
         insertMeal(newMeal)

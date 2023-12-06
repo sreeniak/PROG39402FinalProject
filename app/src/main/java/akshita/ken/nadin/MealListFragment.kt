@@ -1,5 +1,6 @@
 package akshita.ken.nadin
 
+import akshita.ken.nadin.Data.Meal.Meal
 import akshita.ken.nadin.databinding.FragmentMealListBinding
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -36,9 +37,9 @@ class MealListFragment : Fragment() {
 
 //        viewModel = ViewModelProvider(this).get(MealViewModel::class.java)
 
-//        viewModel.getAllMeals().observe(viewLifecycleOwner, {meals ->
-//            updateRecyclerView(meals)
-//        })
+        viewModel.getAllMeals().observe(viewLifecycleOwner) { meals ->
+            updateRecyclerView(meals)
+        }
 
         binding.recycleView.layoutManager = LinearLayoutManager(requireContext())
         binding.recycleView.setHasFixedSize(true)
@@ -47,6 +48,19 @@ class MealListFragment : Fragment() {
             findNavController().navigate(R.id.action_mealListFragment_to_addMealFragment)
         }
     }
+    private fun updateRecyclerView(meals: List<Meal>) {
+        val listMeals = meals.map { meal ->
+            ListMeal(
+                text1 = "Date: " + meal.date,
+                text2 = meal.mealName,
+                text3 = meal.mealType,
+                text4 = meal.calories
+            )
+        }
 
+        // Pass the list of ListMeal items to the adapter
+        val mealAdapter = MealRecyclerView(listMeals)
+        binding.recycleView.adapter = mealAdapter
+    }
 
 }

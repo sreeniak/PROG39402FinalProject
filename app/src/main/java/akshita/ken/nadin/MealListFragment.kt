@@ -52,8 +52,8 @@ class MealListFragment : Fragment() {
         val listMeals = meals.map { meal ->
             ListMeal(
                 text1 = "Date: " + meal.date,
-                text2 = meal.mealName,
-                text3 = meal.mealType,
+                text2 = "Meal Name: " + meal.mealName,
+                text3 = "Meal Type: " + meal.mealType,
                 text4 = meal.calories
             )
         }

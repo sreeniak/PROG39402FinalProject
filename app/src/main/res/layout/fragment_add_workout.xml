@@ -48,16 +48,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Time"
+        android:text="Total Sets"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/editTextTotalSets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Time"
+        android:hint="Enter Total Sets"
         android:inputType="time" />
 
 

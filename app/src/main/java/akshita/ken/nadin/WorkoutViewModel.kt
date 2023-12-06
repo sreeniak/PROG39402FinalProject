@@ -1,5 +1,6 @@
 package akshita.ken.nadin
 
+import akshita.ken.nadin.Data.Meal.Meal
 import akshita.ken.nadin.Data.Workout.Workout
 import akshita.ken.nadin.Data.Workout.WorkoutDao
 import androidx.lifecycle.LiveData
@@ -9,6 +10,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
+
+    fun getAllWorkouts(): LiveData<List<Workout>> {
+        return workoutDao.getAllWorkouts()
+    }
 
     //, totalSets: Int
     fun addNewWorkout(date: String, totalSets: Int, workoutType: String, distance: Double){

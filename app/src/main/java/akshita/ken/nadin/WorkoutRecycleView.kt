@@ -10,7 +10,7 @@ class WorkoutRecycleView (private val WorkoutList:List<WorkoutList>): RecyclerVi
     class MyViewHolder(workoutView: View): RecyclerView.ViewHolder(workoutView){
 
         val workoutDate: TextView = workoutView.findViewById(R.id.textViewWDate)
-       // val workoutTime: TextView = workoutView.findViewById(R.id.textViewWTime)
+        val workoutTotalSets: TextView = workoutView.findViewById(R.id.textViewWTotalSets)
         val workoutType: TextView = workoutView.findViewById(R.id.textViewWType)
         val workoutDistance: TextView = workoutView.findViewById(R.id.textViewWDistance)
     }
@@ -23,7 +23,7 @@ class WorkoutRecycleView (private val WorkoutList:List<WorkoutList>): RecyclerVi
 
         val currentWorkout = WorkoutList[position]
         holder.workoutDate.text = currentWorkout.date
-       // holder.workoutTime.text = currentWorkout.workoutTime
+        holder.workoutTotalSets.text = currentWorkout.totalSets.toString()
         holder.workoutType.text = currentWorkout.workoutType
         holder.workoutDistance.text = currentWorkout.distance.toString()
 

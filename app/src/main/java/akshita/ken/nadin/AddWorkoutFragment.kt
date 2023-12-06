@@ -20,7 +20,7 @@ class AddWorkoutFragment : Fragment() {
 
     private val viewModel: WorkoutViewModel by activityViewModels {
         WorkoutViewModelFactory(
-            (activity?.application as WorkoutApplication).database.workoutDao()
+            (activity?.application as OurApplication).workoutDatabase.workoutDao()
         )
     }
 

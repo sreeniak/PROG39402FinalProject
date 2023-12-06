@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/addWorkoutFragment"
-        android:name="akshita.ken.nadin.addWorkoutFragment"
+        android:name="akshita.ken.nadin.AddWorkoutFragment"
         android:label="addWorkoutFragment" >
         <action
             android:id="@+id/action_addWorkoutFragment_to_workoutListFragment"

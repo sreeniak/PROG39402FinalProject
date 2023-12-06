@@ -57,7 +57,7 @@ class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
 
     fun deleteWorkout(workout: Workout) {
         viewModelScope.launch {
-            workoutDao.deleteWorkout(workout)
+            workoutDao.delete(workout)
 
         }
     }

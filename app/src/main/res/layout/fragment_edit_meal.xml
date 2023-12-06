@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search for a meal to edit below." />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="379dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="50dp"
+        android:hint="Search Meal" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Date" />
+
+    <EditText
+        android:id="@+id/editTextMealName"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Meal Name" />
+
+    <EditText
+        android:id="@+id/editTextMealType"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Meal Type" />
+
+    <EditText
+        android:id="@+id/editTextCalories"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Calories"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+</LinearLayout>

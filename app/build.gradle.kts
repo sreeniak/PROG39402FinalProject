@@ -45,6 +45,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     val room_version = "2.6.0"
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")

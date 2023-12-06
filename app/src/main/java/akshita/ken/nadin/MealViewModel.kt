@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class MealViewModel (private val mealDao: MealDao): ViewModel() {
+
     fun addNewMeal(mealName: String, calories: Int, date: String, mealType: String){
         val newMeal = getNewMealEntry(mealName, calories, date, mealType)
         insertMeal(newMeal)

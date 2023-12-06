@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +16,12 @@ class MealListFragment : Fragment() {
     private val binding get() = _binding!!
 
     //for dynamic list
-    private lateinit var viewModel: MealViewModel
+//    private lateinit var viewModel: MealViewModel
+    private val viewModel: MealViewModel by activityViewModels {
+        MealViewModelFactory(
+            (requireActivity().application as OurApplication).mealDatabase.mealDao()
+        )
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +34,7 @@ class MealListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(MealViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(MealViewModel::class.java)
 
 //        viewModel.getAllMeals().observe(viewLifecycleOwner, {meals ->
 //            updateRecyclerView(meals)

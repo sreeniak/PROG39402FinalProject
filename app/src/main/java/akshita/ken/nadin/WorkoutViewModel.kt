@@ -16,7 +16,7 @@ class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
     }
 
     //, totalSets: Int
-    fun addNewWorkout(date: String, totalSets: Int, workoutType: String, distance: Double){
+    fun addNewWorkout(date: String, totalSets: String, workoutType: String, distance: String) {
         val newWorkout = getNewWorkoutEntry(date, totalSets, workoutType, distance)
         insertWorkout(newWorkout)
     }
@@ -27,14 +27,26 @@ class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
         }
     }
 
-    fun isEntryValid(date: String, totalSets: Int, workoutType: String, distance: Double): Boolean {
-        if (date.isBlank() || totalSets.toString().isBlank() || workoutType.toString().isBlank() || distance.toString().isBlank()) {
+    fun isEntryValid(
+        date: String,
+        totalSets: String,
+        workoutType: String,
+        distance: String
+    ): Boolean {
+        if (date.isBlank() || totalSets.toString().isBlank() || workoutType.toString()
+                .isBlank() || distance.toString().isBlank()
+        ) {
             return false
         }
         return true
     }
 
-    private fun getNewWorkoutEntry(date: String, totalSets: Int, workoutType: String,  distance: Double): Workout {
+    private fun getNewWorkoutEntry(
+        date: String,
+        totalSets: String,
+        workoutType: String,
+        distance: String
+    ): Workout {
         return Workout(
             date = date,
             totalSets = totalSets,
@@ -42,23 +54,23 @@ class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
             distance = distance,
         )
     }
+
+    fun deleteWorkout(workout: Workout) {
+        viewModelScope.launch {
+            workoutDao.deleteWorkout(workout)
+
+        }
+    }
+
+//    fun deleteWorkoutByDate(date: String) {
+//        viewModelScope.launch {
+//            workoutDao.deleteWorkoutByDate(date)
+//        }
+//    }
+//
+//}
+
 }
-
-
-    //val allworkouts: LiveData<List<Workout>> = workoutDao.getAllWorkouts()
-
-
-
-//
-//    suspend fun updateWorkout(workout: Workout) {
-//        workoutDao.updateWorkout(workout)
-//    }
-//
-//    suspend fun deleteWorkout(workout: Workout) {
-//        workoutDao.deleteWorkout(workout)
-//    }
-
-
 class WorkoutViewModelFactory(private val workoutDao: WorkoutDao) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(WorkoutViewModel::class.java)) {

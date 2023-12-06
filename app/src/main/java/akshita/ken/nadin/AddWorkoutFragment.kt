@@ -40,9 +40,9 @@ class AddWorkoutFragment : Fragment() {
     private fun isEntryValid(): Boolean {
         return viewModel.isEntryValid(
             binding.editTextDate.text.toString(),
-            binding.editTextTotalSets.text.toString().toInt(),
+            binding.editTextTotalSets.text.toString(),
             binding.editTextWorkoutType.text.toString(),
-            binding.editTextDistance.text.toString().toDouble(),
+            binding.editTextDistance.text.toString(),
         )
     }
 
@@ -50,9 +50,9 @@ class AddWorkoutFragment : Fragment() {
         if (isEntryValid()) {
             viewModel.addNewWorkout(
                 binding.editTextDate.text.toString(),
-                binding.editTextTotalSets.text.toString().toInt(),
+                binding.editTextTotalSets.text.toString(),
                 binding.editTextWorkoutType.text.toString(),
-                binding.editTextDistance.text.toString().toDouble(),
+                binding.editTextDistance.text.toString(),
             )
 
         }

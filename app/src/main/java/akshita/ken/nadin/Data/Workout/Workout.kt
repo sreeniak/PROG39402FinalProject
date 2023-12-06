@@ -9,6 +9,6 @@ data class Workout(
     val id: Long = 0,
     val date: String,
     val workoutType: String,
-    val totalSets: Int, //dunno if we wanna include this
-    val distance: Double,
+    val totalSets: String, //dunno if we wanna include this
+    val distance: String,
 )

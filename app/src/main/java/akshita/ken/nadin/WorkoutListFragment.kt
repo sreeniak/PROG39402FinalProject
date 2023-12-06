@@ -56,8 +56,14 @@ class WorkoutListFragment : Fragment() {
             )
         }
 
-        val workoutAdapter = WorkoutRecycleView(listWorkouts)
+        val workoutAdapter = WorkoutRecycleView(listWorkouts, viewModel)
         binding.recycleView.adapter = workoutAdapter
+        workoutAdapter.notifyDataSetChanged()
+
+
+//        val workoutAdapter = WorkoutRecycleView(listWorkouts)
+//        binding.recycleView.adapter = workoutAdapter
+//        workoutAdapter.notifyDataSetChanged()
     }
 
 }

@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- workout_item.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
 
     <TextView
         android:id="@+id/textViewWType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
         android:textColor="#000000"
-        android:textStyle="bold"
-        android:layout_marginBottom="4dp"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
     <TextView
         android:id="@+id/textViewWDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
         android:textColor="#888888"
-    android:layout_marginBottom="8dp"/>
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewWTotalSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:layout_marginBottom="4dp"
         android:textColor="#888888"
-    android:layout_marginBottom="4dp"/>
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewWDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:layout_marginBottom="4dp"
         android:textColor="#888888"
-    android:layout_marginBottom="4dp"/>
+        android:textSize="16sp" />
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/deleteBtn"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:background="@color/white"-->
+<!--        android:src="@drawable/deletebutton" />-->
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#DDDDDD"
-    android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:background="#DDDDDD" />
 
 </LinearLayout>

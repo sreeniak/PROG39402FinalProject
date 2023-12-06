@@ -7,4 +7,3 @@ data class WorkoutList(
     val totalSets: String,
     val distance: String
 )
-

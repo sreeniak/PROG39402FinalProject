@@ -14,6 +14,7 @@ class EditMealFragment : Fragment() {
 
     // ViewModel Declaration
     private lateinit var viewModel: EditMealViewModel
+
     // View Binding Declaration
     private lateinit var binding: FragmentEditMealBinding
 
@@ -71,9 +72,12 @@ class EditMealFragment : Fragment() {
         val mealType = binding.editTextMealType.text.toString()
         val calories = binding.editTextCalories.text.toString().toIntOrNull()
 
+        // Using the meal ID for the current meal
+        val currentMealId = viewModel.currentMeal.value?.id ?: 0
+
         if (calories != null) {
             val newMeal = Meal(
-                id = 0,
+                id = currentMealId,
                 date = date,
                 mealName = mealName,
                 mealType = mealType,

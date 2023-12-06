@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search for a workout to edit below." />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="379dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="50dp"
+        android:hint="Search Workout" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Date" />
+
+
+    <EditText
+        android:id="@+id/editTextWorkoutType"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Workout Type" />
+
+    <EditText
+        android:id="@+id/editTextSets"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Total Sets"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextDistance"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:hint="Distance"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+</LinearLayout>

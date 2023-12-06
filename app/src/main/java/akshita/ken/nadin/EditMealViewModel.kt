@@ -29,6 +29,10 @@ class EditMealViewModel : ViewModel() {
             // Searching DB for search input entered and storing in searchResults
             val searchResults = mealDao.searchMeals(searchQuery)
 
+            if (searchResults.isNotEmpty()) {
+                // If meal is found, update the currentMeal LiveData
+                _currentMeal.postValue(searchResults[0])
+            }
             // If meal is found, return value
             _mealFound.postValue(searchResults.isNotEmpty())
         }

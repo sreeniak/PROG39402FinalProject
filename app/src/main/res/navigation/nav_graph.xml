@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_workoutListFragment_to_addWorkoutFragment"
             app:destination="@id/addWorkoutFragment" />
+        <action
+            android:id="@+id/action_workoutListFragment_to_editWorkoutFragment"
+            app:destination="@id/editWorkoutFragment" />
     </fragment>
     <fragment
         android:id="@+id/mealListFragment"
@@ -75,4 +78,8 @@
         android:id="@+id/editMealFragment"
         android:name="akshita.ken.nadin.EditMealFragment"
         android:label="EditMealFragment" />
+    <fragment
+        android:id="@+id/editWorkoutFragment"
+        android:name="akshita.ken.nadin.EditWorkoutFragment"
+        android:label="EditWorkoutFragment" />
 </navigation>

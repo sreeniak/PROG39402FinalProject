@@ -26,6 +26,7 @@
         android:layout_weight="1"
         tools:listitem="@layout/workout_item" />
 
+    <!-- Add a WorkOut Button -->
     <Button
         android:id="@+id/addWorkoutBtn"
         android:layout_width="wrap_content"
@@ -48,5 +49,18 @@
         android:text=""
         android:drawableLeft="@android:drawable/ic_menu_delete"
         android:contentDescription="Search to delete workout"/>
+
+    <!-- Edit WorkOut Button -->
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@+id/delete"
+        android:contentDescription="Search to edit a workout"
+        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:text="" />
 
 </RelativeLayout>

@@ -93,6 +93,10 @@ class WorkoutListFragment : Fragment() {
             hideKeyboard()
             binding.searchInput.text.clear()
         }
+
+        binding.edit.setOnClickListener{
+            findNavController().navigate(R.id.action_workoutListFragment_to_editWorkoutFragment)
+        }
     }
     // For user interaction, dismiss keyboard after button is pressed
     private fun hideKeyboard() {

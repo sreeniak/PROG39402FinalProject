@@ -17,7 +17,6 @@
 
     <!-- RecyclerView -->
 
-    <!-- Add a Meal Button -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
@@ -26,6 +25,7 @@
         android:layout_marginTop="6dp"
         tools:listitem="@layout/listmeal" />
 
+    <!-- Add a Meal Button -->
     <Button
         android:id="@+id/addMealBtn"
         android:layout_width="wrap_content"

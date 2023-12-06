@@ -20,6 +20,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="150dp"
-        android:text="Add a Team" />
+        android:text="Add a Workout" />
 
 </RelativeLayout>

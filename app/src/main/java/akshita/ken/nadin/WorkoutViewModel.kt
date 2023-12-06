@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 
 class WorkoutViewModel(private val workoutDao: WorkoutDao) : ViewModel() {
 
-    val allworkouts: LiveData<List<Workout>> = workoutDao.getAllWorkouts()
+    val allWorkouts: LiveData<List<Workout>> = workoutDao.getAllWorkouts()
 
 
     suspend fun addWorkout(workout: Workout) {

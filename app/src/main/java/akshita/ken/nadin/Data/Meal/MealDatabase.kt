@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Meal::class], version = 2, exportSchema = false)
 abstract class MealDatabase : RoomDatabase() {
-    abstract fun MealDao(): MealDao
+    abstract fun mealDao(): MealDao
 
     companion object {
         @Volatile

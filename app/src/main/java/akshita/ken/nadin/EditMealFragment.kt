@@ -86,6 +86,7 @@ class EditMealFragment : Fragment() {
             )
 
             viewModel.updateMeal(newMeal, requireContext())
+            Toast.makeText(requireContext(), "Meal Updated", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(requireContext(), "Please enter calories", Toast.LENGTH_SHORT).show()
         }

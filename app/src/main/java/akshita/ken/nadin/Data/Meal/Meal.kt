@@ -7,7 +7,9 @@ import androidx.room.PrimaryKey
 class Meal (
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
+    val date: String,
     val mealName: String,
-    val calories: Int,
-    val date: String
+    val mealType: String,
+    val calories: Int
+
 )

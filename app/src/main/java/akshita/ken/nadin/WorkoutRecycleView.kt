@@ -10,9 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class WorkoutRecycleView(
-    private val workoutList: List<WorkoutList>,
-    private val viewModel: WorkoutViewModel
-) : RecyclerView.Adapter<WorkoutRecycleView.MyViewHolder>() {
+    private val workoutList: List<WorkoutList>) : RecyclerView.Adapter<WorkoutRecycleView.MyViewHolder>() {
 
     class MyViewHolder(workoutView: View) : RecyclerView.ViewHolder(workoutView) {
 
@@ -63,11 +61,11 @@ class WorkoutRecycleView(
 //        }
 //    }
 
-    private fun deleteWorkout(workout: Workout) {
-        // Pass the workout to ViewModel for deletion
-        // Ensure your ViewModel has a function to delete a workout
-        viewModel.deleteWorkout(workout)
-    }
+//    private fun deleteWorkout(workout: Workout) {
+//        // Pass the workout to ViewModel for deletion
+//        // Ensure your ViewModel has a function to delete a workout
+//        viewModel.deleteWorkout(workout)
+//    }
 
     override fun getItemCount() = workoutList.size
 

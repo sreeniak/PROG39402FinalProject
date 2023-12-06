@@ -25,7 +25,7 @@ class addMealFragment : Fragment() {
     //viewmodel instance for communication between fragments and activities
     private val viewModel: MealViewModel by activityViewModels {
         MealViewModelFactory(
-            (requireActivity().application as MealApplication).database.mealDao()
+            (requireActivity().application as OurApplication).mealDatabase.mealDao()
         )
     }
     override fun onCreateView(

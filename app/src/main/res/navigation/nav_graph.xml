@@ -77,9 +77,17 @@
     <fragment
         android:id="@+id/editMealFragment"
         android:name="akshita.ken.nadin.EditMealFragment"
-        android:label="EditMealFragment" />
+        android:label="EditMealFragment" >
+        <action
+            android:id="@+id/action_editMealFragment_to_mealListFragment"
+            app:destination="@id/mealListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editWorkoutFragment"
         android:name="akshita.ken.nadin.EditWorkoutFragment"
-        android:label="EditWorkoutFragment" />
+        android:label="EditWorkoutFragment" >
+        <action
+            android:id="@+id/action_editWorkoutFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
 </navigation>

@@ -84,5 +84,6 @@ class EditWorkoutFragment : Fragment() {
         )
         viewModel.updateWorkout(newWorkout, requireContext())
         Toast.makeText(requireContext(), "Workout Updated.", Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_editWorkoutFragment_to_workoutListFragment)
     }
 }

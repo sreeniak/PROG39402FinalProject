@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import akshita.ken.nadin.databinding.FragmentEditMealBinding
+import androidx.navigation.fragment.findNavController
 
 class EditMealFragment : Fragment() {
 
@@ -88,5 +89,7 @@ class EditMealFragment : Fragment() {
         } else {
             Toast.makeText(requireContext(), "Please enter calories", Toast.LENGTH_SHORT).show()
         }
+
+        findNavController().navigate(R.id.action_editMealFragment_to_mealListFragment)
     }
 }

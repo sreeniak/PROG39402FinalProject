@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 
 class MealListFragment : Fragment() {
     private var _binding: FragmentMealListBinding? = null
@@ -22,7 +25,22 @@ class MealListFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        viewModel = ViewModelProvider(this).get(MealViewModel::class.java)
+
+//        viewModel.getAllMeals().observe(viewLifecycleOwner, {meals ->
+//            updateRecyclerView(meals)
+//        })
+
+        binding.recycleView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recycleView.setHasFixedSize(true)
+
+        binding.addMealBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_mealListFragment_to_addMealFragment)
+        }
+    }
 
 
 }

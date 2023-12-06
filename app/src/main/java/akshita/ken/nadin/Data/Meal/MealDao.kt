@@ -20,7 +20,9 @@ interface MealDao {
     @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun updateMeal(meal: Meal)
 
-    @Delete
-    suspend fun deleteMeal(meal: Meal)
+    @Query("SELECT * FROM meal WHERE mealName LIKE :search")
+    fun searchMeals(search: String): List<Meal>
 
+    @Delete
+    fun delete(meal: Meal)
 }

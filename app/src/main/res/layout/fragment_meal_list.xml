@@ -1,23 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MealListFragment">
 
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter meal name to delete" />
+
+    <!-- RecyclerView -->
+
+    <!-- Add a Meal Button -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
-        android:layout_height="454dp"
+        android:layout_height="581dp"
+        android:layout_below="@id/searchInput"
+        android:layout_marginTop="6dp"
         tools:listitem="@layout/listmeal" />
 
     <Button
         android:id="@+id/addMealBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recycleView"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="150dp"
-        android:text="Add a Meal" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:contentDescription="Add a meal button"/>
+
+    <!-- Delete Meal Button -->
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:drawableLeft="@android:drawable/ic_menu_delete"
+        android:contentDescription="Search to delete meal"/>
+
 </RelativeLayout>

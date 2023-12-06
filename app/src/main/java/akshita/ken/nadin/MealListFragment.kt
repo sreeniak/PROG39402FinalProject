@@ -92,6 +92,11 @@ class MealListFragment : Fragment() {
             hideKeyboard()
             binding.searchInput.text.clear()
         }
+
+        binding.edit.setOnClickListener{
+            findNavController().navigate(R.id.action_mealListFragment_to_editMealFragment)
+        }
+
     }
 
     // For user interaction, dismiss keyboard after button is pressed

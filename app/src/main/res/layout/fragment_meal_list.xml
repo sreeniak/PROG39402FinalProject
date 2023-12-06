@@ -21,7 +21,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
-        android:layout_height="581dp"
+        android:layout_height="578dp"
         android:layout_below="@id/searchInput"
         android:layout_marginTop="6dp"
         tools:listitem="@layout/listmeal" />
@@ -50,4 +50,16 @@
         android:drawableLeft="@android:drawable/ic_menu_delete"
         android:contentDescription="Search to delete meal"/>
 
+    <!-- Edit Meal Button -->
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toStartOf="@+id/delete"
+        android:contentDescription="Search to edit a meal"
+        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:text="" />
 </RelativeLayout>

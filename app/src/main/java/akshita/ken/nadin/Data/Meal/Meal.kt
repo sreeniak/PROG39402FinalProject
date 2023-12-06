@@ -10,6 +10,6 @@ class Meal (
     val date: String,
     val mealName: String,
     val mealType: String,
-    val calories: Int
+    var calories: Int
 
 )
